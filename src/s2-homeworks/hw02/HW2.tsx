@@ -50,6 +50,7 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     // return affairs
 }
 
+
 export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need
     return affairs.filter((el) => el._id !== _id)
 }
