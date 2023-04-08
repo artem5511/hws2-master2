@@ -39,17 +39,16 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     return filter === 'all' ? affairs : affairs.filter(affairs => affairs.priority === filter)
     // if (filter === 'all') return affairs
     // if (filter === 'high') {
-    //     affairs = affairs.filter((affairs: { priority: string; }) => affairs.priority === 'high')
+    //     affairs = affairs.filter(el => el.priority === 'high')
     // }
     // if (filter === 'low') {
-    //     affairs = affairs.filter((affairs: { priority: string; }) => affairs.priority === 'low')
+    //     affairs = affairs.filter(el => el.priority === 'low')
     // }
     // if (filter === 'middle') {
-    //     affairs = affairs.filter((affairs: { priority: string; }) => affairs.priority === 'middle')
+    //     affairs = affairs.filter(el => el.priority === 'middle')
     // }// need to fix
     // return affairs
 }
-
 
 export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need
     return affairs.filter((el) => el._id !== _id)
