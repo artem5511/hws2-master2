@@ -20,15 +20,12 @@ import {logDOM} from "@testing-library/react";
 
 // types
 export type UserType = {
-    _id:number
+    _id:string
     name:string
 }
 
 export const pureAddUserCallback = (name: string, setUsers: (users: UserType[])=>void, users: UserType[]) => {
-    const user: UserType = {
-        _id: users.length + 1,
-        name,
-    };
+    const user = {_id:v1(), name: name};
     setUsers([...users, user])
 }
 
